@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Tab Icon -->
+        <link rel="icon" href="./tab_icon/icon.png" type="image/png">
+        <!-- style.css -->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- jQuery UI and jQuery Library -->
+        <link rel="stylesheet" href="./jquery-ui/jquery-ui.min.css">
+        <script defer src="./jquery-ui/external/jquery/jquery.js"></script>
+        <script defer src="./jquery-ui/jquery-ui.min.js"></script>
+        <!-- main.js -->
+        <script defer type="module" src="./js/main.js"></script>
+        <title>Avatar Stat RNG</title>
+    </head>
+    <body>
+        <!-- Dialog -->
+        <div id="dialog" title="Avatar Stat">
+            <div id="content">
+                <p class="label">Enchanting Stats...</p>
+                <div id="progressBar" class="label"></div>
+                <p id="slot1" class="slot"></p>
+                <p id="slot2" class="slot"></p>
+                <p id="slot3" class="slot"></p>
+            </div>
+            <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+                <div class="ui-dialog-buttonset">
+                    <button id="btnCancel" class="ui-button ui-corner-all ui-widget">Cancel</button>
+                    <button id="btnSaveStat" class="ui-button ui-corner-all ui-widget">Save Stat</button>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="container">
+            <div class="header">
+                <h1 class="win-title">Toram Online</h1>
+                <h1 class="win-title">Avatar Stat RNG</h1>
+            </div>
+            <div class="operations">
+                <button id="btnStatList" class="menu-button">Stat List</button>
+                <button id="btnEnchant" class="menu-button">Enchant</button>
+                <button id="btnSavedStats" class="menu-button">Saved Stats</button>
+            </div>
+            <div id="description" class="description"></div>
+        </div>
+    </body>
+</html>
