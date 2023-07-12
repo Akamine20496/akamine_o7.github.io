@@ -55,7 +55,7 @@ export const Attributes = {
     'Critical Damage': new Stat('Critical Damage', val7),
     'Critical Damage%': new Stat('Critical Damage%', val2),
     'Ailment Resistance%': new Stat('Ailment Resistance%', val1),
-    'Guard Recharge%': new Stat('Guard Recharge', val2),
+    'Guard Recharge%': new Stat('Guard Recharge%', val2),
     'Guard Power%': new Stat('Guard Power%', val2),
     'Evasion Recharge%': new Stat('Evasion Recharge%', val2),
     'Physical Resistance%': new Stat('Physical Resistance%', val1),
