@@ -91,7 +91,10 @@ $(window).on('resize', () => {
 // show the dialog
 export function showDialog() {
     $(statDialog).dialog('open');
-    load();
+    
+    if (!($(btnCancel).attr('id') == 'btnOk')) {
+        load();
+    }
 }
 
 // set the text
@@ -137,5 +140,5 @@ function load() {
                 }, 200);
             });
         }
-    }, 35);
+    }, 25);
 }

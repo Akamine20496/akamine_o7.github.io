@@ -1,0 +1,29 @@
+{
+    "name": "Avatar Stat RNG",
+    "short_name": "Avatar Stat RNG",
+    "description": "A gambling avatar stat rolling addiction for toram players",
+    "start_url": "../",
+    "background_color": "white",
+    "theme_color": "white",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "../icon/icon.png",
+            "sizes": "1280x1280",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "../icon/icon192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        }, 
+        {
+            "src": "../icon/icon512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}

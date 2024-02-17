@@ -91,7 +91,7 @@ function generateValue(attribute) {
     else {
         // retrieved Stat Class object
         const retrievedStat = Attributes[attribute];
-        
+
         return retrievedStat.getValue(generateNumber(retrievedStat.getValues().length));
     }
 }
