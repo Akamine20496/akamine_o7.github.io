@@ -44,21 +44,21 @@ self.addEventListener("activate", event => {
     event.waitUntil(
         // Retrieve all cache storage keys
         caches.keys().then(cacheNames => {
-            // Wait until all promises inside Promise.all resolve
-            return Promise.all(
-                // Map through each cache storage key
-                cacheNames.map(name => {
-                    // Check if the cache storage key matches the specified CACHE_NAME
-                    if (name === CACHE_NAME) {
-                        // If it matches, log a message indicating deletion of the old cache
-                        console.log('Deleting old cache:', name);
-                        // Delete the cache with the matching name
-                        return caches.delete(name);
-                    }
-                })
-            );
+            // Iterate through each cache storage key
+            cacheNames.forEach(name => {
+                // Check if the cache storage key matches the specified CACHE_NAME
+                if (name === CACHE_NAME) {
+                    // If it matches, log a message indicating deletion of the old cache
+                    console.log('Deleting old cache:', name);
+                    // Delete the cache with the matching name
+                    caches.delete(name);
+                }
+            })
+        }).then(() => {
+            self.skipWaiting();
         })
     );
+
     // Immediately take control of clients
     self.clients.claim();
 });
@@ -71,6 +71,7 @@ self.addEventListener('fetch', event => {
         // get the resource from the cache
         const cachedResponse = await cache.match(event.request);
         console.log('Cached Response', cachedResponse);
+
         if (cachedResponse) {
             return cachedResponse;
         } else {

@@ -1,6 +1,15 @@
 export function loadSavedStats() {
+    let savedStats = null;
     const description = document.getElementById('description');
-    const savedStats = JSON.parse(localStorage.getItem('savedStats'));
+
+    // checks if the connection is online or not
+    if (navigator.onLine) {
+        const savedStatsOnline = JSON.parse(localStorage.getItem('savedStatsOnline'));
+        savedStats = savedStatsOnline;
+    } else {
+        const savedStatsOffline= JSON.parse(localStorage.getItem('savedStatsOffline'));
+        savedStats = savedStatsOffline;
+    }
 
     const h3 = document.createElement('h3');
     h3.innerText = 'Saved Stats';
